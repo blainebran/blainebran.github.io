@@ -1,0 +1,1226 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>踩踏天地 原创 - 官方视频门户,记录每一次真实的踩踏与天地</title>
+<meta name="description" content="踩踏天地官方网站,专注原创短片、户外踩踏与天地之间的真实影像记录,汇聚创作者、企业与社区,打造值得信赖的原创视频内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2a4a'/%3E%3Cpath d='M14 44 L26 22 L36 36 L44 26 L52 44 Z' fill='%23f5b942'/%3E%3Ccircle cx='46' cy='18' r='6' fill='%23e86a4b'/%3E%3C/svg%3E">
+<style>
+:root{
+  --cta-bg:#0f1b30;
+  --cta-panel:#17253f;
+  --cta-panel-2:#1e2f4f;
+  --cta-line:#2c3f63;
+  --cta-ink:#eaf1fb;
+  --cta-ink-soft:#a8b8d4;
+  --cta-amber:#f5b942;
+  --cta-coral:#e86a4b;
+  --cta-teal:#46c2b4;
+  --cta-radius:14px;
+  --cta-shadow:0 18px 40px rgba(4,10,22,.45);
+  --cta-sticky:96px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:var(--cta-sticky);}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",sans-serif;
+  background:var(--cta-bg);
+  color:var(--cta-ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+h1,h2,h3,h4{margin:0 0 .6em;line-height:1.3;font-weight:700;}
+p{margin:0 0 1em;}
+ul,ol{margin:0 0 1em;padding-left:1.2em;}
+/* ===== 布局容器 ===== */
+.cta-wrap{width:min(1180px,calc(100% - 2.4rem));margin:0 auto;}
+.cta-section{padding:3.6rem 0;border-top:1px solid rgba(44,63,99,.45);}
+.cta-section:first-of-type{border-top:0;}
+.cta-eyebrow{
+  display:inline-block;font-size:.78rem;letter-spacing:.16em;
+  color:var(--cta-amber);text-transform:uppercase;margin-bottom:.5rem;
+}
+.cta-h2{font-size:clamp(1.5rem,2.6vw,2.05rem);letter-spacing:.01em;}
+.cta-section-lead{color:var(--cta-ink-soft);max-width:62ch;margin-bottom:2rem;}
+.cta-muted{color:var(--cta-ink-soft);}
+/* ===== 公告条 + 页头吸顶 ===== */
+.cta-topbar{
+  position:sticky;top:0;z-index:80;
+  background:linear-gradient(90deg,#12203a,#1a2c4b 55%,#12203a);
+  border-bottom:1px solid var(--cta-line);
+  box-shadow:0 6px 22px rgba(4,10,22,.35);
+}
+.cta-notice{
+  display:flex;align-items:center;gap:.7rem;
+  padding:.5rem 0;font-size:.82rem;color:var(--cta-ink-soft);
+  overflow:hidden;
+}
+.cta-notice-tag{
+  flex:none;background:var(--cta-coral);color:#fff;
+  padding:.1rem .5rem;border-radius:5px;font-size:.72rem;letter-spacing:.08em;
+}
+.cta-notice-track{
+  display:flex;gap:2.2rem;white-space:nowrap;
+  animation:cta-ticker 34s linear infinite;
+}
+.cta-notice-track span::before{content:"·";margin-right:.7rem;color:var(--cta-amber);}
+@keyframes cta-ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@media (prefers-reduced-motion:reduce){.cta-notice-track{animation:none;}}
+.cta-header{padding:.7rem 0;}
+.cta-header-row{display:flex;align-items:center;gap:1.2rem;}
+.cta-logo{display:flex;align-items:center;gap:.6rem;flex:none;}
+.cta-logo-mark{
+  width:38px;height:38px;border-radius:11px;flex:none;
+  background:linear-gradient(140deg,var(--cta-amber),var(--cta-coral));
+  display:grid;place-items:center;font-weight:800;color:#14213a;font-size:1.05rem;
+}
+.cta-logo-text{font-weight:800;font-size:1.08rem;letter-spacing:.04em;}
+.cta-logo-text small{display:block;font-size:.68rem;color:var(--cta-ink-soft);font-weight:500;letter-spacing:.12em;}
+.cta-nav{display:flex;gap:.2rem;margin-left:auto;flex-wrap:wrap;}
+.cta-nav a{
+  padding:.45rem .7rem;border-radius:8px;font-size:.9rem;color:var(--cta-ink-soft);
+  transition:background .2s,color .2s;
+}
+.cta-nav a:hover,.cta-nav a:focus-visible{background:var(--cta-panel-2);color:var(--cta-ink);}
+.cta-nav-toggle{
+  display:none;margin-left:auto;background:var(--cta-panel-2);border:1px solid var(--cta-line);
+  color:var(--cta-ink);border-radius:9px;padding:.45rem .7rem;font-size:.86rem;
+}
+.cta-search{display:flex;align-items:center;gap:.4rem;flex:none;}
+.cta-search input{
+  width:190px;background:var(--cta-panel);border:1px solid var(--cta-line);
+  border-radius:9px;padding:.48rem .75rem;color:var(--cta-ink);font-size:.86rem;outline:none;
+}
+.cta-search input:focus{border-color:var(--cta-amber);}
+.cta-search button{
+  background:var(--cta-amber);color:#14213a;border:0;border-radius:9px;
+  padding:.48rem .85rem;font-weight:700;font-size:.86rem;
+}
+.cta-search-msg{font-size:.78rem;color:var(--cta-teal);margin-top:.35rem;min-height:1.1em;}
+.cta-mobile-search{display:none;margin-top:.7rem;}
+/* ===== 按钮 ===== */
+.cta-btn{
+  display:inline-flex;align-items:center;gap:.4rem;
+  padding:.62rem 1.15rem;border-radius:10px;font-weight:700;font-size:.9rem;
+  border:1px solid transparent;transition:transform .18s,box-shadow .18s,background .2s;
+}
+.cta-btn:hover{transform:translateY(-2px);}
+.cta-btn-primary{background:var(--cta-amber);color:#14213a;box-shadow:0 10px 24px rgba(245,185,66,.22);}
+.cta-btn-ghost{background:transparent;border-color:var(--cta-line);color:var(--cta-ink);}
+.cta-btn-soft{background:var(--cta-panel-2);color:var(--cta-ink);border-color:var(--cta-line);}
+.cta-btn-mini{padding:.3rem .65rem;font-size:.78rem;border-radius:8px;}
+/* ===== 首屏（全幅主视觉背景 + 浮动文字） ===== */
+.cta-hero{
+  position:relative;overflow:hidden;border-bottom:1px solid var(--cta-line);
+}
+.cta-hero-visual{
+  position:absolute;inset:0;
+}
+.cta-hero-visual img{width:100%;height:100%;object-fit:cover;opacity:.85;}
+.cta-hero-visual::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(9,16,30,.94) 0%,rgba(9,16,30,.82) 46%,rgba(9,16,30,.35) 100%);
+}
+.cta-hero-inner{
+  position:relative;z-index:2;
+  padding:4.4rem 0 3.6rem;
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:2.6rem;align-items:center;
+}
+.cta-hero-copy{max-width:660px;}
+.cta-hero-badge{
+  display:inline-flex;align-items:center;gap:.45rem;
+  background:rgba(245,185,66,.14);border:1px solid rgba(245,185,66,.42);
+  color:var(--cta-amber);border-radius:999px;padding:.28rem .8rem;font-size:.76rem;letter-spacing:.1em;
+  margin-bottom:1rem;
+}
+.cta-hero h1{
+  font-size:clamp(2.1rem,4.6vw,3.5rem);
+  letter-spacing:.02em;margin-bottom:.5rem;
+}
+.cta-hero h1 em{
+  font-style:normal;color:var(--cta-amber);
+}
+.cta-hero-slogan{font-size:1.06rem;color:var(--cta-ink);margin-bottom:.9rem;font-weight:600;}
+.cta-hero-desc{color:var(--cta-ink-soft);font-size:.97rem;margin-bottom:1.5rem;}
+.cta-hero-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:1.7rem;}
+.cta-hero-stats{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;
+  list-style:none;padding:0;margin:0;
+}
+.cta-hero-stats li{
+  background:rgba(23,37,63,.72);border:1px solid var(--cta-line);
+  border-radius:12px;padding:.75rem .85rem;backdrop-filter:blur(4px);
+}
+.cta-hero-stats b{display:block;font-size:1.32rem;color:var(--cta-amber);letter-spacing:.02em;}
+.cta-hero-stats span{font-size:.76rem;color:var(--cta-ink-soft);}
+.cta-hero-side{
+  background:rgba(15,27,48,.82);border:1px solid var(--cta-line);
+  border-radius:16px;padding:1.2rem 1.25rem;backdrop-filter:blur(6px);
+  box-shadow:var(--cta-shadow);
+}
+.cta-hero-side h2{font-size:1.02rem;margin-bottom:.3rem;}
+.cta-hero-side p{font-size:.84rem;color:var(--cta-ink-soft);margin-bottom:.9rem;}
+.cta-hero-side ol{margin:0;padding-left:1.15rem;font-size:.86rem;color:var(--cta-ink);}
+.cta-hero-side ol li{margin-bottom:.7rem;}
+.cta-hero-side ol li small{display:block;color:var(--cta-ink-soft);font-size:.76rem;}
+/* ===== 焦点大卡 + 列表 ===== */
+.cta-focus-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:1.6rem;align-items:start;}
+.cta-card{
+  background:var(--cta-panel);border:1px solid var(--cta-line);border-radius:var(--cta-radius);
+  overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s;
+  min-width:0;
+}
+.cta-card:hover{transform:translateY(-3px);border-color:#3d5580;box-shadow:var(--cta-shadow);}
+.cta-card-media{position:relative;aspect-ratio:16/9;background:#0b1526;overflow:hidden;}
+.cta-card-media img{width:100%;height:100%;object-fit:cover;transition:transform .45s;}
+.cta-card:hover .cta-card-media img{transform:scale(1.04);}
+.cta-card-body{padding:1rem 1.1rem 1.15rem;}
+.cta-card-body h3{font-size:1.05rem;margin-bottom:.35rem;}
+.cta-card-body p{font-size:.86rem;color:var(--cta-ink-soft);margin-bottom:.7rem;}
+.cta-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.7rem;}
+.cta-tag{
+  font-size:.72rem;padding:.12rem .5rem;border-radius:999px;
+  background:rgba(70,194,180,.13);color:var(--cta-teal);border:1px solid rgba(70,194,180,.3);
+}
+.cta-meta{display:flex;flex-wrap:wrap;gap:.7rem;font-size:.76rem;color:var(--cta-ink-soft);align-items:center;}
+.cta-meta button{
+  background:transparent;border:1px solid var(--cta-line);color:var(--cta-ink-soft);
+  border-radius:7px;padding:.15rem .5rem;font-size:.75rem;transition:color .16s,border-color .16s;
+}
+.cta-meta button:hover{color:var(--cta-amber);border-color:var(--cta-amber);}
+.cta-meta button.is-active{color:var(--cta-coral);border-color:var(--cta-coral);}
+.cta-list{list-style:none;padding:0;margin:0;display:grid;gap:.7rem;}
+.cta-list-item{
+  display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:.85rem;align-items:start;
+  background:var(--cta-panel);border:1px solid var(--cta-line);border-radius:12px;
+  padding:.8rem .9rem;transition:transform .18s,border-color .18s;
+}
+.cta-list-item:hover{transform:translateX(3px);border-color:#3d5580;}
+.cta-list-num{
+  font-weight:800;font-size:1.02rem;color:var(--cta-amber);line-height:1.2;
+  border-right:1px solid var(--cta-line);padding-right:.6rem;text-align:center;
+}
+.cta-list-item h4{font-size:.95rem;margin:0 0 .25rem;}
+.cta-list-item p{font-size:.8rem;color:var(--cta-ink-soft);margin:0;}
+.cta-list-item .cta-list-meta{font-size:.74rem;color:var(--cta-ink-soft);margin-top:.35rem;}
+.cta-list-play{
+  flex:none;background:var(--cta-panel-2);border:1px solid var(--cta-line);color:var(--cta-ink);
+  border-radius:8px;padding:.3rem .6rem;font-size:.75rem;white-space:nowrap;
+}
+.cta-list-play:hover{border-color:var(--cta-amber);color:var(--cta-amber);}
+/* ===== 关键词解析长文 ===== */
+.cta-essay{
+  background:linear-gradient(180deg,rgba(30,47,79,.55),rgba(23,37,63,.55));
+  border:1px solid var(--cta-line);border-radius:16px;padding:1.6rem 1.6rem .8rem;
+}
+.cta-essay h3{font-size:1.14rem;margin-top:1.4rem;color:var(--cta-amber);}
+.cta-essay h3:first-child{margin-top:0;}
+.cta-essay p{font-size:.92rem;color:#d5e0f2;}
+.cta-essay blockquote{
+  margin:1rem 0;padding:.8rem 1rem;border-left:3px solid var(--cta-amber);
+  background:rgba(245,185,66,.07);border-radius:0 10px 10px 0;font-size:.9rem;color:var(--cta-ink);
+}
+/* ===== 专题 ===== */
+.cta-topics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem;}
+.cta-topic{
+  background:var(--cta-panel);border:1px solid var(--cta-line);border-radius:var(--cta-radius);
+  padding:1.15rem 1.2rem;display:flex;flex-direction:column;gap:.5rem;min-width:0;
+}
+.cta-topic.feature{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:1.3rem;align-items:center;}
+.cta-topic-media{aspect-ratio:16/10;border-radius:11px;overflow:hidden;background:#0b1526;}
+.cta-topic-media img{width:100%;height:100%;object-fit:cover;}
+.cta-topic h3{font-size:1.06rem;margin:0;}
+.cta-topic > p{font-size:.85rem;color:var(--cta-ink-soft);margin:0;}
+.cta-status{
+  display:inline-block;font-size:.72rem;padding:.1rem .5rem;border-radius:999px;
+  background:rgba(232,106,75,.15);color:#f79b84;border:1px solid rgba(232,106,75,.35);align-self:flex-start;
+}
+.cta-status.done{background:rgba(70,194,180,.13);color:var(--cta-teal);border-color:rgba(70,194,180,.3);}
+.cta-topic ul{list-style:none;padding:0;margin:.2rem 0 0;font-size:.84rem;display:grid;gap:.4rem;}
+.cta-topic ul li::before{content:"▸";color:var(--cta-amber);margin-right:.45rem;}
+/* ===== 作者矩阵（双列简介） ===== */
+.cta-authors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.1rem;}
+.cta-author{
+  display:grid;grid-template-columns:64px minmax(0,1fr);gap:.9rem;
+  background:var(--cta-panel);border:1px solid var(--cta-line);border-radius:var(--cta-radius);
+  padding:1rem;min-width:0;
+}
+.cta-avatar{
+  width:64px;height:64px;border-radius:16px;display:grid;place-items:center;
+  font-weight:800;font-size:1.3rem;color:#14213a;flex:none;
+}
+.cta-avatar.a1{background:linear-gradient(140deg,#f5b942,#e86a4b);}
+.cta-avatar.a2{background:linear-gradient(140deg,#46c2b4,#3d7bd1);color:#0e1a2c;}
+.cta-avatar.a3{background:linear-gradient(140deg,#c9a7f5,#e86a4b);}
+.cta-avatar.a4{background:linear-gradient(140deg,#7fd1a8,#46c2b4);color:#0e1a2c;}
+.cta-avatar.a5{background:linear-gradient(140deg,#f5d97a,#c98b3d);}
+.cta-author h3{font-size:.98rem;margin:0 0 .15rem;}
+.cta-author .cta-author-field{font-size:.76rem;color:var(--cta-teal);margin-bottom:.3rem;}
+.cta-author p{font-size:.81rem;color:var(--cta-ink-soft);margin:0 0 .5rem;}
+.cta-author-stats{display:flex;gap:.9rem;font-size:.75rem;color:var(--cta-ink-soft);}
+.cta-author-stats b{color:var(--cta-ink);}
+/* ===== 榜单 ===== */
+.cta-ranks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem;}
+.cta-rank{
+  background:var(--cta-panel);border:1px solid var(--cta-line);border-radius:var(--cta-radius);
+  padding:1rem 1.05rem;min-width:0;
+}
+.cta-rank h3{font-size:.96rem;color:var(--cta-amber);display:flex;align-items:center;gap:.4rem;}
+.cta-rank ol{list-style:none;padding:0;margin:.4rem 0 0;font-size:.83rem;display:grid;gap:.5rem;}
+.cta-rank ol li{display:grid;grid-template-columns:20px minmax(0,1fr) auto;gap:.5rem;align-items:baseline;}
+.cta-rank ol li span:first-child{color:var(--cta-coral);font-weight:800;}
+.cta-rank ol li em{font-style:normal;color:var(--cta-ink-soft);font-size:.74rem;}
+/* ===== 评价 ===== */
+.cta-quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;}
+.cta-quote{
+  background:var(--cta-panel);border:1px solid var(--cta-line);border-radius:12px;
+  padding:.95rem 1.05rem;font-size:.86rem;color:#d5e0f2;min-width:0;
+}
+.cta-quote:nth-child(1){grid-column:1 / -1;border-left:3px solid var(--cta-amber);}
+.cta-quote footer{margin-top:.55rem;font-size:.76rem;color:var(--cta-ink-soft);}
+.cta-quote footer b{color:var(--cta-teal);}
+/* ===== FAQ ===== */
+.cta-faq details{
+  background:var(--cta-panel);border:1px solid var(--cta-line);border-radius:11px;
+  padding:.75rem 1rem;margin-bottom:.65rem;
+}
+.cta-faq summary{cursor:pointer;font-weight:600;font-size:.92rem;color:var(--cta-ink);}
+.cta-faq summary::marker{color:var(--cta-amber);}
+.cta-faq details p{font-size:.85rem;color:var(--cta-ink-soft);margin:.6rem 0 0;}
+/* ===== 企业动态 + 合作 ===== */
+.cta-split{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:1.4rem;align-items:start;}
+.cta-news{list-style:none;padding:0;margin:0;display:grid;gap:.75rem;}
+.cta-news li{
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:.8rem;align-items:start;
+  background:var(--cta-panel);border:1px solid var(--cta-line);border-radius:11px;padding:.8rem .95rem;
+}
+.cta-news time{font-size:.75rem;color:var(--cta-amber);white-space:nowrap;font-weight:700;}
+.cta-news h3{font-size:.92rem;margin:0 0 .2rem;}
+.cta-news p{font-size:.8rem;color:var(--cta-ink-soft);margin:0;}
+.cta-partners{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;
+  list-style:none;padding:0;margin:0;
+}
+.cta-partners li{
+  background:var(--cta-panel-2);border:1px solid var(--cta-line);border-radius:10px;
+  padding:.85rem .6rem;text-align:center;font-size:.83rem;font-weight:600;color:#d5e0f2;
+}
+.cta-partners li small{display:block;font-size:.7rem;color:var(--cta-ink-soft);font-weight:400;margin-top:.15rem;}
+/* ===== 投稿 ===== */
+.cta-submit{
+  background:linear-gradient(120deg,rgba(245,185,66,.14),rgba(70,194,180,.1));
+  border:1px solid var(--cta-line);border-radius:16px;padding:1.5rem 1.5rem;
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.2rem;align-items:center;
+}
+.cta-submit h2{font-size:1.35rem;margin-bottom:.4rem;}
+.cta-submit p{font-size:.88rem;color:var(--cta-ink-soft);margin:0;}
+/* ===== 页脚 ===== */
+.cta-footer{border-top:1px solid var(--cta-line);background:#0b1526;padding:2.6rem 0 1.4rem;margin-top:1rem;}
+.cta-footer-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,.6fr));gap:1.6rem;}
+.cta-footer h4{font-size:.9rem;color:var(--cta-amber);margin-bottom:.6rem;}
+.cta-footer ul{list-style:none;padding:0;margin:0;font-size:.82rem;color:var(--cta-ink-soft);display:grid;gap:.35rem;}
+.cta-footer p{font-size:.82rem;color:var(--cta-ink-soft);}
+.cta-footer-bottom{
+  margin-top:1.8rem;padding-top:1rem;border-top:1px solid var(--cta-line);
+  display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;justify-content:space-between;
+  font-size:.76rem;color:var(--cta-ink-soft);
+}
+/* ===== 回到顶部 & Toast ===== */
+.cta-totop{
+  position:fixed;right:1.1rem;bottom:1.1rem;z-index:90;
+  background:var(--cta-amber);color:#14213a;border:0;border-radius:50%;
+  width:44px;height:44px;font-size:1.1rem;font-weight:800;box-shadow:var(--cta-shadow);
+  opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;
+}
+.cta-totop.show{opacity:1;pointer-events:auto;}
+.cta-totop:hover{transform:translateY(-3px);}
+.cta-toast{
+  position:fixed;left:50%;bottom:2rem;transform:translate(-50%,16px);
+  background:#eaf1fb;color:#14213a;font-size:.85rem;font-weight:600;
+  padding:.6rem 1.1rem;border-radius:10px;box-shadow:var(--cta-shadow);
+  opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:120;
+}
+.cta-toast.show{opacity:1;transform:translate(-50%,0);}
+/* ===== 弹窗 ===== */
+.cta-modal{
+  position:fixed;inset:0;z-index:130;display:none;
+  background:rgba(6,12,24,.72);padding:1.2rem;
+}
+.cta-modal.open{display:grid;place-items:center;}
+.cta-modal-panel{
+  background:var(--cta-panel);border:1px solid var(--cta-line);border-radius:16px;
+  width:min(560px,100%);max-height:86vh;overflow:auto;padding:1.4rem 1.4rem 1.2rem;
+  box-shadow:var(--cta-shadow);
+}
+.cta-modal-panel h3{margin-bottom:.6rem;}
+.cta-modal-panel p{font-size:.88rem;color:var(--cta-ink-soft);}
+.cta-modal-close{
+  float:right;background:var(--cta-panel-2);border:1px solid var(--cta-line);
+  color:var(--cta-ink);border-radius:8px;padding:.2rem .6rem;font-size:.8rem;
+}
+.cta-form-field{margin-bottom:.8rem;}
+.cta-form-field label{display:block;font-size:.8rem;color:var(--cta-ink-soft);margin-bottom:.3rem;}
+.cta-form-field input,.cta-form-field textarea,.cta-form-field select{
+  width:100%;background:var(--cta-bg);border:1px solid var(--cta-line);
+  border-radius:9px;padding:.55rem .7rem;color:var(--cta-ink);font-size:.87rem;font-family:inherit;
+}
+.cta-share-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.8rem;}
+/* ===== 响应式 ===== */
+@media (max-width:980px){
+  .cta-hero-inner{grid-template-columns:1fr;padding:3rem 0 2.6rem;}
+  .cta-hero-side{max-width:560px;}
+  .cta-focus-grid,.cta-split{grid-template-columns:1fr;}
+  .cta-topic.feature{grid-template-columns:1fr;}
+  .cta-ranks{grid-template-columns:1fr;}
+  .cta-footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:760px){
+  .cta-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:var(--cta-panel);border-bottom:1px solid var(--cta-line);
+    padding:.6rem 1.2rem;flex-direction:column;gap:.2rem;box-shadow:var(--cta-shadow);
+  }
+  .cta-nav.open{display:flex;}
+  .cta-nav a{padding:.55rem .4rem;}
+  .cta-nav-toggle{display:inline-block;}
+  .cta-header-row{position:relative;flex-wrap:wrap;}
+  .cta-search{display:none;}
+  .cta-mobile-search{display:flex;gap:.4rem;padding-bottom:.6rem;}
+  .cta-mobile-search input{
+    flex:1;background:var(--cta-panel);border:1px solid var(--cta-line);border-radius:9px;
+    padding:.5rem .7rem;color:var(--cta-ink);font-size:.86rem;outline:none;
+  }
+  .cta-mobile-search button{
+    background:var(--cta-amber);color:#14213a;border:0;border-radius:9px;
+    padding:.5rem .9rem;font-weight:700;font-size:.85rem;
+  }
+  .cta-topics,.cta-authors,.cta-quotes{grid-template-columns:1fr;}
+  .cta-quote:nth-child(1){grid-column:auto;}
+  .cta-hero-stats{grid-template-columns:1fr;}
+  .cta-submit{grid-template-columns:1fr;}
+  .cta-footer-grid{grid-template-columns:1fr;}
+  .cta-section{padding:2.6rem 0;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- S1 公告条 + 页头 -->
+<div class="cta-topbar">
+  <div class="cta-wrap cta-notice">
+    <span class="cta-notice-tag">官方更新</span>
+    <div class="cta-notice-track">
+      <span>「踩踏天地·冬日踩线记」12 月 3 日上线首发，纪录南北 6 条真实踩踏路线</span>
+      <span>原创作者扶持计划第四季开启报名，投稿入口已开放</span>
+      <span>踩踏天地创作者大会 12 月 18 日线上直播，日程表已发布</span>
+      <span>高清正片《天地之间·第一季》第 9 集已更新，支持收藏与投币</span>
+      <span>「踩踏天地·冬日踩线记」12 月 3 日上线首发，纪录南北 6 条真实踩踏路线</span>
+      <span>原创作者扶持计划第四季开启报名，投稿入口已开放</span>
+      <span>踩踏天地创作者大会 12 月 18 日线上直播，日程表已发布</span>
+      <span>高清正片《天地之间·第一季》第 9 集已更新，支持收藏与投币</span>
+    </div>
+  </div>
+  <header class="cta-header">
+    <div class="cta-wrap">
+      <div class="cta-header-row">
+        <a href="#top" class="cta-logo" aria-label="踩踏天地官网首页">
+          <span class="cta-logo-mark">踩</span>
+          <span class="cta-logo-text">踩踏天地<small>原创影像官方门户</small></span>
+        </a>
+        <button class="cta-nav-toggle" id="ctaNavToggle" aria-expanded="false" aria-controls="ctaSiteNav">菜单</button>
+        <nav class="cta-nav" id="ctaSiteNav" aria-label="主导航">
+          <a href="#focus">焦点</a>
+          <a href="#essay">品牌解析</a>
+          <a href="#topics">专题企划</a>
+          <a href="#authors">创作者</a>
+          <a href="#ranks">榜单</a>
+          <a href="#voices">口碑</a>
+          <a href="#news">动态</a>
+          <a href="#faq">帮助</a>
+        </nav>
+        <form class="cta-search" id="ctaSearchForm" role="search">
+          <input type="search" id="ctaSearchInput" placeholder="搜索原创短片、路线、作者" aria-label="站内搜索">
+          <button type="submit">搜索</button>
+        </form>
+      </div>
+      <form class="cta-mobile-search" id="ctaMobileSearchForm" role="search">
+        <input type="search" id="ctaMobileSearchInput" placeholder="搜索原创短片、路线、作者" aria-label="移动端站内搜索">
+        <button type="submit">搜索</button>
+      </form>
+      <p class="cta-search-msg" id="ctaSearchMsg" role="status" aria-live="polite"></p>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- S2 / M1 品牌首屏 -->
+  <section class="cta-hero" aria-label="踩踏天地品牌首屏">
+    <div class="cta-hero-visual">
+      <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 760'%3E%3Cdefs%3E%3ClinearGradient id='sky' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%230e1a2e'/%3E%3Cstop offset='.55' stop-color='%231d3355'/%3E%3Cstop offset='1' stop-color='%23c97a3e'/%3E%3C/linearGradient%3E%3ClinearGradient id='ridge1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232a4368'/%3E%3Cstop offset='1' stop-color='%23172540'/%3E%3C/linearGradient%3E%3ClinearGradient id='ridge2' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%234a6b8f'/%3E%3Cstop offset='1' stop-color='%23233a5c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1440' height='760' fill='url(%23sky)'/%3E%3Ccircle cx='1080' cy='250' r='92' fill='%23f5b942' opacity='.9'/%3E%3Ccircle cx='1080' cy='250' r='150' fill='%23f5b942' opacity='.14'/%3E%3Cpath d='M0 520 L230 360 L420 470 L620 300 L860 500 L1080 380 L1290 500 L1440 420 L1440 760 L0 760 Z' fill='url(%23ridge1)'/%3E%3Cpath d='M0 620 L180 500 L380 600 L560 470 L760 610 L980 500 L1200 620 L1440 540 L1440 760 L0 760 Z' fill='url(%23ridge2)' opacity='.9'/%3E%3Cpath d='M0 700 L240 620 L520 700 L780 610 L1040 710 L1260 640 L1440 700 L1440 760 L0 760 Z' fill='%230d1830'/%3E%3Cg stroke='%23f5b942' stroke-width='3' opacity='.75' fill='none'%3E%3Cpath d='M110 690 C260 660 400 690 540 640 C680 590 760 640 880 600'/%3E%3Cpath d='M880 600 C1000 560 1120 610 1290 560' stroke-dasharray='12 10'/%3E%3C/g%3E%3Cg fill='%23eaf1fb' opacity='.9'%3E%3Ccircle cx='880' cy='600' r='9' fill='%23e86a4b'/%3E%3Ccircle cx='540' cy='640' r='7'/%3E%3Ccircle cx='1290' cy='560' r='6'/%3E%3C/g%3E%3Cg fill='%23eaf1fb' opacity='.55'%3E%3Ccircle cx='240' cy='120' r='2.4'/%3E%3Ccircle cx='340' cy='70' r='1.8'/%3E%3Ccircle cx='470' cy='150' r='2.2'/%3E%3Ccircle cx='640' cy='90' r='1.6'/%3E%3Ccircle cx='760' cy='170' r='2'/%3E%3Ccircle cx='1260' cy='130' r='2.2'/%3E%3Ccircle cx='1350' cy='200' r='1.7'/%3E%3C/g%3E%3C/svg%3E"
+           alt="踩踏天地品牌主视觉:暮色山脊间蜿蜒的踩踏路线与落日" width="1440" height="760">
+    </div>
+    <div class="cta-wrap cta-hero-inner">
+      <div class="cta-hero-copy">
+        <span class="cta-hero-badge">官方网站 · 原创内容平台</span>
+        <h1>踩踏天地<em>·</em>原创</h1>
+        <p class="cta-hero-slogan">把每一步踩踏过的天地,拍成值得反复观看的原创影像。</p>
+        <p class="cta-hero-desc">
+          踩踏天地是一家专注原创短片的视频品牌与企业级内容平台,以真实踩踏、户外路线、在地记录为核心,
+          持续为创作者与用户提供高清、正版的视频内容。作为值得信赖的原创影像社区,我们深耕户外与生活方式垂直领域,
+          用品质内容连接品牌、创作者和每一位观众。
+        </p>
+        <div class="cta-hero-actions">
+          <a class="cta-btn cta-btn-primary" href="#focus">观看焦点正片</a>
+          <a class="cta-btn cta-btn-ghost" href="#submit">我要投稿</a>
+          <a class="cta-btn cta-btn-ghost" href="#essay">了解品牌</a>
+        </div>
+        <ul class="cta-hero-stats">
+          <li><b>12,860+</b><span>原创短片累计上线</span></li>
+          <li><b>1,940万</b><span>月度视频播放量</span></li>
+          <li><b>860+</b><span>认证创作者与团队</span></li>
+        </ul>
+      </div>
+      <aside class="cta-hero-side" aria-label="本周推荐榜单速览">
+        <h2>本周踩踏现场 · 速览</h2>
+        <p>由官方编辑部与社区共同选出的高清原创精选,持续运营,每周更新。</p>
+        <ol>
+          <li>《雾起石阶:凌晨四点的上山踩踏》<small>户外路线 · 原创新片 · 22 分钟</small></li>
+          <li>《踩过三座桥的人》<small>城市探索 · 创作者访谈 · 18 分钟</small></li>
+          <li>《留一条路给后来者》<small>在地文化 · 品牌故事 · 26 分钟</small></li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <!-- S3 / M2 + M3 焦点内容与热门视频 -->
+  <section class="cta-section" id="focus">
+    <div class="cta-wrap">
+      <span class="cta-eyebrow">Focus · 焦点内容</span>
+      <h2 class="cta-h2">踩踏天地官方焦点:一部正片,四条现场记录</h2>
+      <p class="cta-section-lead">
+        焦点区呈现踩踏天地最具影响力的原创正片与本周热门现场。所有内容均为官方发布或创作者原创,高清、正版,支持点赞、收藏与分享。
+      </p>
+
+      <div class="cta-focus-grid">
+        <article class="cta-card">
+          <div class="cta-card-media">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='dusk' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23213a5e'/%3E%3Cstop offset='.6' stop-color='%235a6f8f'/%3E%3Cstop offset='1' stop-color='%23d98b4a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23dusk)'/%3E%3Cpath d='M0 330 L160 240 L300 320 L470 210 L630 320 L800 250 L800 450 L0 450 Z' fill='%23142036' opacity='.92'/%3E%3Cpath d='M0 390 L200 320 L420 400 L640 330 L800 380 L800 450 L0 450 Z' fill='%230d1829'/%3E%3Cg fill='none' stroke='%23eaf1fb' stroke-width='2.6' opacity='.85'%3E%3Cpath d='M60 410 C200 380 330 410 470 360 C600 315 700 350 800 320'/%3E%3C/g%3E%3Cg fill='%23f5b942'%3E%3Ccircle cx='470' cy='360' r='6'/%3E%3Ccircle cx='200' cy='393' r='4.5'/%3E%3C/g%3E%3Cg fill='%23e86a4b'%3E%3Crect x='560' y='285' width='6' height='34' rx='3'/%3E%3Cpath d='M560 285 l24 8 -24 8 z'/%3E%3C/g%3E%3Cg stroke='%23eaf1fb' opacity='.35' stroke-width='1.6'%3E%3Cpath d='M120 90 L120 190 M120 90 L170 110 L120 130'/%3E%3C/g%3E%3C/svg%3E"
+                 alt="焦点正片《天地之间》第一季封面:暮色山脊与踩踏路线" width="800" height="450">
+          </div>
+          <div class="cta-card-body">
+            <div class="cta-tags"><span class="cta-tag">焦点正片</span><span class="cta-tag">户外路线</span><span class="cta-tag">高清</span></div>
+            <h3>《天地之间》第一季:一条被踩了四百年的上山路</h3>
+            <p>编辑部跟拍 14 天,记录一条古道上三代踩踏者的日常。从清晨的石阶到傍晚的岔口,原创镜头完整保留风声、脚步与对话,是踩踏天地官方出品的年度重点正片。</p>
+            <div class="cta-meta">
+              <span>作者:山线工作室</span>
+              <span>播放 48.2 万</span>
+              <span>点赞 3.1 万</span>
+              <button type="button" data-cta-like>点赞 +1</button>
+              <button type="button" data-cta-fav>收藏</button>
+              <button type="button" data-cta-share>分享</button>
+            </div>
+          </div>
+        </article>
+
+        <ul class="cta-list">
+          <li class="cta-list-item">
+            <span class="cta-list-num">01</span>
+            <div>
+              <h4>《雾起石阶:凌晨四点的上山踩踏》</h4>
+              <p>从山脚到半坡,镜头跟着第一拨踩踏者上山,记录雾中前行的真实节奏。</p>
+              <div class="cta-list-meta">户外路线 · 22:04 · 播放 21.6 万</div>
+            </div>
+            <button type="button" class="cta-list-play" data-cta-share>分享</button>
+          </li>
+          <li class="cta-list-item">
+            <span class="cta-list-num">02</span>
+            <div>
+              <h4>《踩过三座桥的人》</h4>
+              <p>城市探索创作者阿岸的原创短片,用三座桥串起一条被低估的踩踏路线。</p>
+              <div class="cta-list-meta">城市探索 · 18:32 · 播放 17.9 万</div>
+            </div>
+            <button type="button" class="cta-list-play" data-cta-like>点赞 +1</button>
+          </li>
+          <li class="cta-list-item">
+            <span class="cta-list-num">03</span>
+            <div>
+              <h4>《留一条路给后来者》</h4>
+              <p>在地文化专题:沿线居民如何与踩踏者共处,一段关于边界与善意的记录。</p>
+              <div class="cta-list-meta">在地文化 · 26:11 · 播放 15.3 万</div>
+            </div>
+            <button type="button" class="cta-list-play" data-cta-fav>收藏</button>
+          </li>
+          <li class="cta-list-item">
+            <span class="cta-list-num">04</span>
+            <div>
+              <h4>《第一次踩踏:新人 7 天训练记录》</h4>
+              <p>教程干货向原创内容,从体能准备到装备选择,给第一次出发的人一份清单。</p>
+              <div class="cta-list-meta">教程干货 · 15:47 · 播放 12.8 万</div>
+            </div>
+            <button type="button" class="cta-list-play" data-cta-share>分享</button>
+          </li>
+          <li class="cta-list-item">
+            <span class="cta-list-num">05</span>
+            <div>
+              <h4>《一块被踩亮的青石》</h4>
+              <p>品牌故事短片,讲述一条古道与它的维护者,镜头克制,细节扎实。</p>
+              <div class="cta-list-meta">品牌故事 · 11:20 · 播放 9.4 万</div>
+            </div>
+            <button type="button" class="cta-list-play" data-cta-like>点赞 +1</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关键词解析长文：品牌故事/深度解析 -->
+  <section class="cta-section" id="essay">
+    <div class="cta-wrap">
+      <span class="cta-eyebrow">Brand Story · 品牌解析</span>
+      <h2 class="cta-h2">踩踏天地品牌解析:一家原创视频品牌如何理解“踩踏”与“天地”</h2>
+      <p class="cta-section-lead">
+        “踩踏天地”不是一个简单的户外口号,而是一套关于原创影像、真实行走与内容生态的长期方法论。以下从四个角度展开,也是踩踏天地官方网站对外发布的品牌理念说明。
+      </p>
+      <div class="cta-essay">
+        <h3>一、为什么是“踩踏”:从脚步出发的原创内容</h3>
+        <p>
+          在踩踏天地的内容体系里,“踩踏”既是动作,也是方法。我们相信,真正有影响力的影像往往从一个具体动作开始:一个人清晨系紧鞋带,一个人踩过一段被雨水冲软的石阶,一个人在岔口停下来辨别方向。这些动作细小、重复、不上镜,却是所有户外与城市影像最真实的底座。踩踏天地把镜头对准这些瞬间,以原创短片的方式,把被忽略的脚步记录下来,让观众看到“到达”之前的漫长与耐心。
+        </p>
+        <p>
+          作为一家持续运营的视频品牌与企业内容平台,踩踏天地自创立起就把“原创”写进流程:选题要实地踩点,拍摄要作者本人到场,剪辑要保留同期声,字幕要经过事实核对。我们不采用拼接素材式的快速产出,也不追逐短期热梗。每一条上线的原创内容,都要经过选题会、踩点记录、成片复核三道流程。这套流程让内容更新速度变慢,但也让“踩踏天地出品”逐渐成为观众心中品质与真实感的代名词。
+        </p>
+        <h3>二、为什么是“天地”:从路线到在地的垂直深耕</h3>
+        <p>
+          “天地”指向的是空间、季节与人的关系。踩踏天地深耕户外与生活方式垂直领域,把内容拆成若干可长期运营的系列:山线系列记录海拔与气候,城线系列记录街区与桥梁,水线系列记录河岸与渡口,人线系列记录沿线居民与维护者。每个系列都有自己的选片标准与更新节奏,不以点击量为唯一指标,而是看内容是否补充了这个系列此前缺失的一段现场。
+        </p>
+        <p>
+          这种垂直深耕带来的结果是,踩踏天地的内容生态里出现了稳定的作者群。有专门拍清晨雾气的摄影师,有擅长记录对话的访谈作者,有把路线画成插画的设计师,也有做装备测评的实测团队。平台不要求所有作者风格统一,反而鼓励多元与包容:同一条路线可以有一支安静的长镜头短片,也可以有一份节奏明快的攻略。用户至上的原则,让我们把“用户能不能看懂、能不能用上”作为成片的第一道检验。
+        </p>
+        <h3>三、原创、正版与品质:内容生态的三个底线</h3>
+        <p>
+          踩踏天地对“原创”的定义包含三层:素材原创、结构原创、观点原创。素材原创意味着画面由作者团队实拍;结构原创意味着叙事不被同质化模板套用;观点原创意味着每支短片都要回答一个具体问题,而不是空泛抒情。平台为作者提供正版音乐库、授权字体与素材登记工具,所有上线内容均可追溯来源,这也是我们被称为值得信赖的原创平台的原因之一。
+        </p>
+        <p>
+          在品质把控上,踩踏天地坚持高清标准与统一的视听规范:画面稳定、同期声清晰、字幕可读、信息准确。我们不鼓励用夸张标题换取播放,也不允许未标注的合成画面冒充实拍。正版与透明,是平台对社会责任的承诺;对观众诚实,对拍摄对象尊重,对路线环境负责,这三条底线写进了每一位签约创作者的约定之中。也正因为如此,踩踏天地的口碑不是靠一次传播,而是靠持续运营中的每一次守约慢慢积累。
+        </p>
+        <h3>四、社区与陪伴:让踩踏天地持续生长</h3>
+        <p>
+          踩踏天地不是单向发布的媒体,而是一个有持续活力的社区。观众可以在评论区补充自己走过的路线,可以在专题页投票决定下一季的拍摄方向,也可以在投稿入口提交自己的第一支短片。平台每季度举办一次主题挑战,从“雨天路线”到“一条被低估的街”,用比赛与报名机制把分散的创作者聚在一起。新人榜、热度榜与口碑榜并行,让不同阶段的作者都能被看见。
+        </p>
+        <p>
+          我们常说,踩踏天地提供的是一种陪伴:陪伴一个人从第一次出发到第十次出发,陪伴一条路线从无人知晓到被认真维护,陪伴一个社区从几十条评论到上千条真实分享。成长不是数据曲线,而是有人愿意在下一次出发前回来看看。未来,踩踏天地将继续在原创短片、线下放映、创作者培训与公益踩线四个方向投入,把“踩踏天地”做成一个可被长期信任的品牌,让更多人通过影像理解脚下的土地。
+        </p>
+        <blockquote>
+          官方发布:踩踏天地品牌理念全文收录于《踩踏天地内容白皮书》,可在投稿页面下载。我们坚持原创、正版与高清,坚持对每一条路线与每一位观众负责。
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4 / M4 专题企划 -->
+  <section class="cta-section" id="topics">
+    <div class="cta-wrap">
+      <span class="cta-eyebrow">Series · 专题企划</span>
+      <h2 class="cta-h2">踩踏天地专题企划:三条正在更新的原创内容线</h2>
+      <p class="cta-section-lead">
+        专题是踩踏天地内容生态的组织方式。每个专题由编辑部发起、创作者参与、社区投票推进,更新状态公开透明。
+      </p>
+      <div class="cta-topics">
+        <article class="cta-topic feature">
+          <div class="cta-topic-media">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 450'%3E%3Cdefs%3E%3ClinearGradient id='winter' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23dfe9f5'/%3E%3Cstop offset='.5' stop-color='%238fa9c7'/%3E%3Cstop offset='1' stop-color='%2335507a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='720' height='450' fill='url(%23winter)'/%3E%3Cpath d='M0 300 L120 220 L250 290 L380 200 L520 300 L640 240 L720 290 L720 450 L0 450 Z' fill='%23253c5e'/%3E%3Cpath d='M0 360 L150 300 L320 370 L500 310 L720 380 L720 450 L0 450 Z' fill='%23172439'/%3E%3Cg stroke='%23eaf1fb' stroke-width='2' opacity='.7' fill='none'%3E%3Cpath d='M40 400 C170 370 300 400 430 350 C560 302 650 340 720 320'/%3E%3C/g%3E%3Cg fill='%23f5b942'%3E%3Ccircle cx='430' cy='350' r='5'/%3E%3Ccircle cx='170' cy='383' r='4'/%3E%3C/g%3E%3Cg fill='%23eaf1fb' opacity='.8'%3E%3Ccircle cx='120' cy='90' r='3'/%3E%3Ccircle cx='240' cy='60' r='2.4'/%3E%3Ccircle cx='360' cy='110' r='2.8'/%3E%3Ccircle cx='500' cy='70' r='2.2'/%3E%3Ccircle cx='620' cy='120' r='2.6'/%3E%3C/g%3E%3C/svg%3E"
+                 alt="冬日踩线记专题封面:雪线山脊与结霜的踩踏路径" width="720" height="450">
+          </div>
+          <div>
+            <span class="cta-status">更新中 · 第 4 周</span>
+            <h3>专题一:冬日踩线记</h3>
+            <p>冬季路线的踩踏记录。编辑部与 6 位创作者分赴南北,记录结霜的石阶、封冻的渡口与清晨的雾气,呈现真实冬日出行的难点与细节。</p>
+            <ul>
+              <li>《结霜石阶的第一脚》· 户外路线 · 已上线</li>
+              <li>《北岸封冻前的最后渡口》· 在地文化 · 已上线</li>
+              <li>《保暖装备实测:三层穿法》· 实测测评 · 本周五上线</li>
+            </ul>
+          </div>
+        </article>
+        <article class="cta-topic">
+          <span class="cta-status done">已完结 · 共 8 集</span>
+          <h3>专题二:一条路的四季</h3>
+          <p>同一段古道,春、夏、秋、冬各拍一次。用固定机位与同期声,观察植被、路况与人流的变化,是踩踏天地的口碑系列之一。</p>
+          <ul>
+            <li>《春:苔痕初起》· 日常记录 · 已上线</li>
+            <li>《夏:雨后的岔口》· 治愈影像 · 已上线</li>
+            <li>《冬:无人时段的脚步声》· 情感故事 · 已上线</li>
+          </ul>
+        </article>
+        <article class="cta-topic">
+          <span class="cta-status">征集中 · 社区投票</span>
+          <h3>专题三:被低估的城线</h3>
+          <p>由社区投票决定的城市踩踏路线专题。目前候选 5 条街区,得票最高者将获得编辑部跟拍支持,并开放创作者联合投稿。</p>
+          <ul>
+            <li>《三座桥与一条窄巷》· 城市探索 · 制作中</li>
+            <li>《旧仓库区的午后》· 城市探索 · 制作中</li>
+            <li>《被地图忽略的台阶》· 创作幕后 · 制作中</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5 / M5 创作者矩阵 -->
+  <section class="cta-section" id="authors">
+    <div class="cta-wrap">
+      <span class="cta-eyebrow">Creators · 创作者</span>
+      <h2 class="cta-h2">踩踏天地创作者矩阵:五位长期合作的原创作者</h2>
+      <p class="cta-section-lead">
+        他们来自不同方向,擅长不同题材,共同构成了踩踏天地的内容生态。以下信息由作者本人确认,作品数据每月更新。
+      </p>
+      <div class="cta-authors">
+        <article class="cta-author">
+          <span class="cta-avatar a1" aria-hidden="true">山</span>
+          <div>
+            <h3>山线工作室</h3>
+            <p class="cta-author-field">擅长:户外路线 · 长片记录</p>
+            <p>三人小队,主拍山线系列,坚持同期声与自然光。代表作《天地之间》第一季。拍摄前平均踩点 3 次,认为“路线自己会长出来”。</p>
+            <div class="cta-author-stats"><span>作品 <b>86</b></span><span>粉丝 <b>12.4万</b></span></div>
+          </div>
+        </article>
+        <article class="cta-author">
+          <span class="cta-avatar a2" aria-hidden="true">岸</span>
+          <div>
+            <h3>阿岸</h3>
+            <p class="cta-author-field">擅长:城市探索 · 人物访谈</p>
+            <p>常驻南方城市的街道记录者,擅长把桥梁、巷口与咖啡店串成一条可步行路线。镜头克制,访谈问题直接,被观众称为“最会走路的作者”。</p>
+            <div class="cta-author-stats"><span>作品 <b>124</b></span><span>粉丝 <b>18.7万</b></span></div>
+          </div>
+        </article>
+        <article class="cta-author">
+          <span class="cta-avatar a3" aria-hidden="true">雾</span>
+          <div>
+            <h3>雾里小拍</h3>
+            <p class="cta-author-field">擅长:治愈影像 · 情感故事</p>
+            <p>专注清晨与大雾天气的影像创作者,常用一支定焦镜头完成整片。作品节奏缓慢,保留大量环境声,是踩踏天地治愈类内容的核心作者。</p>
+            <div class="cta-author-stats"><span>作品 <b>57</b></span><span>粉丝 <b>9.2万</b></span></div>
+          </div>
+        </article>
+        <article class="cta-author">
+          <span class="cta-avatar a4" aria-hidden="true">测</span>
+          <div>
+            <h3>老测起步</h3>
+            <p class="cta-author-field">擅长:深度测评 · 实用技巧</p>
+            <p>装备实测团队主理人,坚持自费购买、实地使用 30 天以上再出片。测评表格清晰、结论保守,是新手踩踏者最常收藏的作者之一。</p>
+            <div class="cta-author-stats"><span>作品 <b>142</b></span><span>粉丝 <b>21.3万</b></span></div>
+          </div>
+        </article>
+        <article class="cta-author">
+          <span class="cta-avatar a5" aria-hidden="true">线</span>
+          <div>
+            <h3>线描手记</h3>
+            <p class="cta-author-field">擅长:在地文化 · 创作幕后</p>
+            <p>插画师出身,用线描与实拍结合的方式记录路线。擅长与沿线居民对话,作品常呈现一条路的维护史,是踩踏天地文化类专题的常驻作者。</p>
+            <div class="cta-author-stats"><span>作品 <b>73</b></span><span>粉丝 <b>11.6万</b></span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6 / M14 + M8 榜单与口碑 -->
+  <section class="cta-section" id="ranks">
+    <div class="cta-wrap">
+      <span class="cta-eyebrow">Ranking · 榜单</span>
+      <h2 class="cta-h2">踩踏天地数据榜单:热度、新人、口碑三榜并行</h2>
+      <p class="cta-section-lead">榜单每周一更新,综合播放、完播、收藏与评论质量计算,不唯播放量论。</p>
+      <div class="cta-ranks">
+        <article class="cta-rank">
+          <h3>热度榜</h3>
+          <ol>
+            <li><span>1</span><span>《天地之间》第一季</span><em>48.2万</em></li>
+            <li><span>2</span><span>《雾起石阶》</span><em>21.6万</em></li>
+            <li><span>3</span><span>《踩过三座桥的人》</span><em>17.9万</em></li>
+            <li><span>4</span><span>《留一条路给后来者》</span><em>15.3万</em></li>
+            <li><span>5</span><span>《第一次踩踏》</span><em>12.8万</em></li>
+          </ol>
+        </article>
+        <article class="cta-rank">
+          <h3>新人榜</h3>
+          <ol>
+            <li><span>1</span><span>夜行小周</span><em>上线 19 天</em></li>
+            <li><span>2</span><span>转角摄影社</span><em>上线 26 天</em></li>
+            <li><span>3</span><span>一步一镜</span><em>上线 31 天</em></li>
+            <li><span>4</span><span>北岸记录</span><em>上线 38 天</em></li>
+            <li><span>5</span><span>石阶计划</span><em>上线 44 天</em></li>
+          </ol>
+        </article>
+        <article class="cta-rank">
+          <h3>口碑榜</h3>
+          <ol>
+            <li><span>1</span><span>《一块被踩亮的青石》</span><em>9.6 分</em></li>
+            <li><span>2</span><span>《同一条路的四种走法》</span><em>9.4 分</em></li>
+            <li><span>3</span><span>《给后来者的一封短信》</span><em>9.3 分</em></li>
+            <li><span>4</span><span>《雨天路线的三个细节》</span><em>9.1 分</em></li>
+            <li><span>5</span><span>《踩踏者的工具箱》</span><em>9.0 分</em></li>
+          </ol>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section" id="voices">
+    <div class="cta-wrap">
+      <span class="cta-eyebrow">Voices · 用户口碑</span>
+      <h2 class="cta-h2">踩踏天地用户评价:来自社区的七条真实留言</h2>
+      <p class="cta-section-lead">以下留言来自专题页、评论区与放映活动反馈,已获用户授权展示。</p>
+      <div class="cta-quotes">
+        <blockquote class="cta-quote">
+          “《天地之间》我完整看了两遍。很少有户外片愿意把等待和犹豫留在成片里,踩踏天地做到了。这不是那种看完就忘的爽片,而是会让人重新想走一遍的片子。”
+          <footer><b>@未署名观众</b> · 关注户外路线 3 年</footer>
+        </blockquote>
+        <blockquote class="cta-quote">
+          “作为新手,老测起步的装备视频帮我省了不少钱。表格写得很细,不吹参数,看完知道该买什么、不该买什么。”
+          <footer><b>@小鹿不迷路</b> · 新人创作者</footer>
+        </blockquote>
+        <blockquote class="cta-quote">
+          “投稿流程比想象中顺,三天收到编辑回复,还给了具体修改建议。这种认真对待新人的平台不多。”
+          <footer><b>@夜行小周</b> · 新人榜第 1</footer>
+        </blockquote>
+        <blockquote class="cta-quote">
+          “专题更新状态写得很清楚,什么时候上线、哪个作者拍的都能查到。喜欢这种透明感。”
+          <footer><b>@桥下散步</b> · 城市路线爱好者</footer>
+        </blockquote>
+        <blockquote class="cta-quote">
+          “画质确实是高清,同期声也保留得好。手机上外放都能听出脚步踩在碎石上的区别,细节很打动我。”
+          <footer><b>@半坡听众</b> · 音频从业者</footer>
+        </blockquote>
+        <blockquote class="cta-quote">
+          “唯一的建议是希望多出一些短一点的攻略,通勤路上看。长片很好,但碎片时间也需要照顾。”
+          <footer><b>@地铁第八站</b> · 每周观看用户</footer>
+        </blockquote>
+        <blockquote class="cta-quote">
+          “线下放映活动参加了两次,组织得很稳,导演映后交流不敷衍。看得出是一个在持续运营的团队。”
+          <footer><b>@石阶常客</b> · 社区志愿者</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 企业动态 + 合作品牌 -->
+  <section class="cta-section" id="news">
+    <div class="cta-wrap">
+      <span class="cta-eyebrow">Updates · 企业动态</span>
+      <h2 class="cta-h2">踩踏天地企业动态与合作伙伴</h2>
+      <p class="cta-section-lead">官方发布内容、更新日志与合作信息集中在此,便于创作者与用户核对时间与版本。</p>
+      <div class="cta-split">
+        <div>
+          <h3 style="font-size:1.02rem;color:var(--cta-amber);">近期企业动态</h3>
+          <ul class="cta-news">
+            <li>
+              <time datetime="2026-11-18">11/18</time>
+              <div>
+                <h3>原创作者扶持计划第四季开放报名</h3>
+                <p>面向新人创作者,提供拍摄支持与正版素材授权,报名期至 12 月 10 日。</p>
+              </div>
+            </li>
+            <li>
+              <time datetime="2026-11-12">11/12</time>
+              <div>
+                <h3>《天地之间》第一季第 9 集上线</h3>
+                <p>本集聚焦雨后的岔口与临时改道的选择,同步开放评论与收藏功能。</p>
+              </div>
+            </li>
+            <li>
+              <time datetime="2026-11-05">11/05</time>
+              <div>
+                <h3>创作者大会日程发布</h3>
+                <p>12 月 18 日线上直播,含选题工作坊、剪辑复盘与社区圆桌三个环节。</p>
+              </div>
+            </li>
+            <li>
+              <time datetime="2026-10-29">10/29</time>
+              <div>
+                <h3>内容白皮书 2026 版发布</h3>
+                <p>新增原创认定标准与素材登记流程说明,可在投稿页面下载。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="font-size:1.02rem;color:var(--cta-amber);">合作与支持</h3>
+          <ul class="cta-partners">
+            <li>山野补给站<small>装备支持</small></li>
+            <li>北岸书店<small>线下放映</small></li>
+            <li>石阶计划<small>公益踩线</small></li>
+            <li>长路音乐<small>正版配乐</small></li>
+            <li>青石影像<small>后期协作</small></li>
+            <li>城市步道协会<small>路线顾问</small></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 FAQ -->
+  <section class="cta-section" id="faq">
+    <div class="cta-wrap">
+      <span class="cta-eyebrow">FAQ · 帮助中心</span>
+      <h2 class="cta-h2">踩踏天地常见问题</h2>
+      <p class="cta-section-lead">关于投稿、版权、内容标准与社区规则的高频问题。</p>
+      <div class="cta-faq">
+        <details>
+          <summary>如何向踩踏天地投稿原创作品?</summary>
+          <p>点击页面中的“我要投稿”按钮填写表单,需提供作品简介、拍摄地点、素材来源说明与作者联系方式。编辑部一般在 3 个工作日内回复,通过后会安排成片复核。</p>
+        </details>
+        <details>
+          <summary>平台对“原创”的认定标准是什么?</summary>
+          <p>要求素材原创、结构原创、观点原创三层同时满足。实拍素材占比低于 70% 的合成类内容需明确标注,未标注者不予上线。详细条款见内容白皮书。</p>
+        </details>
+        <details>
+          <summary>作品上线后版权归谁?</summary>
+          <p>著作权归作者所有,踩踏天地获得官方渠道的展示与推广授权,期限与合作方式在签约时明确。平台不擅自二次剪辑或转授第三方。</p>
+        </details>
+        <details>
+          <summary>为什么有些内容标注“高清”?</summary>
+          <p>踩踏天地对上传内容有统一的清晰度与音频规范,达到标准的作品会在信息栏标注高清。标注同时代表该片通过了平台的技术与内容双重审核。</p>
+        </details>
+        <details>
+          <summary>社区评论有哪些规则?</summary>
+          <p>鼓励补充路线信息与真实体验,禁止人身攻击、泄露拍摄对象隐私与未经证实的路线引导。违规评论会被折叠,严重者暂停互动权限。</p>
+        </details>
+        <details>
+          <summary>专题的更新状态如何查询?</summary>
+          <p>每个专题卡片顶部均标注“更新中”“已完结”或“征集中”,具体上线日期在专题内容条目中列出,如有调整会在公告条同步。</p>
+        </details>
+        <details>
+          <summary>是否支持线下放映合作?</summary>
+          <p>支持。我们与书店、社区空间与户外机构合作开展小规模放映,可提供片源、字幕与映后交流支持,合作意向请通过投稿表单说明。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 / M13 投稿入口 -->
+  <section class="cta-section" id="submit">
+    <div class="cta-wrap">
+      <div class="cta-submit">
+        <div>
+          <h2>把你踩踏过的天地,交给踩踏天地</h2>
+          <p>无论是第一次出发的记录,还是一条走了十年的路线,我们都愿意认真看完。提交作品即可参与原创作者扶持计划,优质内容将获得官方推荐与正版素材支持。</p>
+        </div>
+        <button type="button" class="cta-btn cta-btn-primary" id="ctaSubmitOpen">打开投稿表单</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- S8 页脚 -->
+<footer class="cta-footer">
+  <div class="cta-wrap">
+    <div class="cta-footer-grid">
+      <div>
+        <div class="cta-logo" style="margin-bottom:.8rem;">
+          <span class="cta-logo-mark">踩</span>
+          <span class="cta-logo-text">踩踏天地<small>原创影像官方门户</small></span>
+        </div>
+        <p>踩踏天地官方网站 · 版权所有 · 持续运营中。专注原创短片、户外路线与在地记录,为创作者与企业提供高品质视频内容生态。</p>
+        <p>原创 · 正版 · 高清 · 值得信赖</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#focus">焦点正片</a></li>
+          <li><a href="#topics">专题企划</a></li>
+          <li><a href="#ranks">数据榜单</a></li>
+          <li><a href="#voices">用户口碑</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与</h4>
+        <ul>
+          <li><a href="#submit">投稿入口</a></li>
+          <li><a href="#authors">创作者矩阵</a></li>
+          <li><a href="#faq">帮助中心</a></li>
+          <li><a href="#news">企业动态</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#essay">品牌解析</a></li>
+          <li><a href="#news">合作伙伴</a></li>
+          <li>内容合作:studio@example.com</li>
+          <li>周一至周五 10:00–18:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cta-footer-bottom">
+      <span>© 2026 踩踏天地 · 官方网站 · 原创内容版权所有</span>
+      <span>内容备案号:踩踏天地内容字第 2026-118 号</span>
+    </div>
+  </div>
+</footer>
+
+<button class="cta-totop" id="ctaToTop" aria-label="回到顶部" title="回到顶部">↑</button>
+<div class="cta-toast" id="ctaToast" role="status" aria-live="polite"></div>
+
+<!-- 投稿弹窗 -->
+<div class="cta-modal" id="ctaSubmitModal" role="dialog" aria-modal="true" aria-labelledby="ctaSubmitTitle">
+  <div class="cta-modal-panel">
+    <button type="button" class="cta-modal-close" data-cta-close>关闭</button>
+    <h3 id="ctaSubmitTitle">踩踏天地投稿入口</h3>
+    <p>填写基础信息后,编辑部会在 3 个工作日内与你联系。请确保素材为原创,并注明拍摄地点。</p>
+    <form id="ctaSubmitForm">
+      <div class="cta-form-field">
+        <label for="ctaName">作者昵称</label>
+        <input id="ctaName" type="text" placeholder="例如:夜行小周" required>
+      </div>
+      <div class="cta-form-field">
+        <label for="ctaContact">联系方式</label>
+        <input id="ctaContact" type="text" placeholder="邮箱或其他联系方式" required>
+      </div>
+      <div class="cta-form-field">
+        <label for="ctaCategory">内容方向</label>
+        <select id="ctaCategory">
+          <option>户外路线</option>
+          <option>城市探索</option>
+          <option>在地文化</option>
+          <option>深度测评</option>
+          <option>创作幕后</option>
+        </select>
+      </div>
+      <div class="cta-form-field">
+        <label for="ctaIntro">作品简介</label>
+        <textarea id="ctaIntro" rows="3" placeholder="拍摄地点、时长与核心内容" required></textarea>
+      </div>
+      <button type="submit" class="cta-btn cta-btn-primary">提交作品信息</button>
+    </form>
+  </div>
+</div>
+
+<!-- 分享弹窗 -->
+<div class="cta-modal" id="ctaShareModal" role="dialog" aria-modal="true" aria-labelledby="ctaShareTitle">
+  <div class="cta-modal-panel">
+    <button type="button" class="cta-modal-close" data-cta-close>关闭</button>
+    <h3 id="ctaShareTitle">分享这支原创短片</h3>
+    <p>选择分享方式,或复制页面链接发送给朋友。</p>
+    <div class="cta-share-row">
+      <button type="button" class="cta-btn cta-btn-soft" data-cta-toastmsg="已生成微信分享提示">微信</button>
+      <button type="button" class="cta-btn cta-btn-soft" data-cta-toastmsg="已生成微博分享提示">微博</button>
+      <button type="button" class="cta-btn cta-btn-soft" data-cta-toastmsg="已生成 QQ 分享提示">QQ</button>
+      <button type="button" class="cta-btn cta-btn-primary" id="ctaCopyLink">复制链接</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 移动端导航 ---------- */
+  var navToggle = document.getElementById('ctaNavToggle');
+  var nav = document.getElementById('ctaSiteNav');
+  if (navToggle && nav) {
+    navToggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.textContent = open ? '收起' : '菜单';
+    });
+    nav.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        nav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.textContent = '菜单';
+      }
+    });
+  }
+
+  /* ---------- Toast ---------- */
+  var toast = document.getElementById('ctaToast');
+  var toastTimer = null;
+  function showToast(msg) {
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toast.classList.remove('show'); }, 2200);
+  }
+
+  /* ---------- 搜索反馈 ---------- */
+  var searchMsg = document.getElementById('ctaSearchMsg');
+  function bindSearch(form, input) {
+    if (!form || !input) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var q = input.value.trim();
+      if (!q) {
+        searchMsg.textContent = '请输入关键词,例如:石阶、路线、测评。';
+        return;
+      }
+      searchMsg.textContent = '已按“' + q + '”为你筛选原创内容,结果将在列表与榜单中同步更新。';
+    });
+  }
+  bindSearch(document.getElementById('ctaSearchForm'), document.getElementById('ctaSearchInput'));
+  bindSearch(document.getElementById('ctaMobileSearchForm'), document.getElementById('ctaMobileSearchInput'));
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.addEventListener('click', function (e) {
+    var likeBtn = e.target.closest('[data-cta-like]');
+    if (likeBtn) {
+      if (likeBtn.dataset.liked === '1') {
+        likeBtn.dataset.liked = '0';
+        likeBtn.textContent = '点赞 +1';
+        likeBtn.classList.remove('is-active');
+        showToast('已取消点赞');
+      } else {
+        likeBtn.dataset.liked = '1';
+        likeBtn.textContent = '已点赞';
+        likeBtn.classList.add('is-active');
+        showToast('点赞成功,感谢支持原创');
+      }
+      return;
+    }
+    var favBtn = e.target.closest('[data-cta-fav]');
+    if (favBtn) {
+      if (favBtn.dataset.faved === '1') {
+        favBtn.dataset.faved = '0';
+        favBtn.textContent = '收藏';
+        favBtn.classList.remove('is-active');
+        showToast('已取消收藏');
+      } else {
+        favBtn.dataset.faved = '1';
+        favBtn.textContent = '已收藏';
+        favBtn.classList.add('is-active');
+        showToast('已加入收藏夹');
+      }
+      return;
+    }
+    var shareBtn = e.target.closest('[data-cta-share]');
+    if (shareBtn) {
+      openModal(shareModal);
+      return;
+    }
+    var msgBtn = e.target.closest('[data-cta-toastmsg]');
+    if (msgBtn) {
+      showToast(msgBtn.dataset.ctaToastmsg);
+    }
+  });
+
+  /* ---------- 弹窗管理 ---------- */
+  var shareModal = document.getElementById('ctaShareModal');
+  var submitModal = document.getElementById('ctaSubmitModal');
+  var lastFocus = null;
+
+  function openModal(modal) {
+    if (!modal) return;
+    lastFocus = document.activeElement;
+    modal.classList.add('open');
+    var panel = modal.querySelector('.cta-modal-panel');
+    if (panel && panel.querySelector('input,textarea,select,button')) {
+      var first = panel.querySelector('input,textarea,select,button');
+      if (first) first.focus();
+    }
+  }
+  function closeModals() {
+    [shareModal, submitModal].forEach(function (m) { if (m) m.classList.remove('open'); });
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('[data-cta-close]')) { closeModals(); return; }
+    if (e.target.classList && e.target.classList.contains('cta-modal')) { closeModals(); }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeModals();
+  });
+
+  var submitOpen = document.getElementById('ctaSubmitOpen');
+  if (submitOpen) submitOpen.addEventListener('click', function () { openModal(submitModal); });
+
+  var submitForm = document.getElementById('ctaSubmitForm');
+  if (submitForm) {
+    submitForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var nameInput = document.getElementById('ctaName');
+      var name = nameInput ? nameInput.value.trim() : '';
+      closeModals();
+      submitForm.reset();
+      showToast(name ? ('已收到 ' + name + ' 的投稿,编辑部将在 3 个工作日内回复') : '已收到投稿,编辑部将在 3 个工作日内回复');
+    });
+  }
+
+  /* ---------- 复制链接 ---------- */
+  var copyBtn = document.getElementById('ctaCopyLink');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function () {
+      var link = 'https://caita-tiandi.example/original';
+      function done() { showToast('链接已复制,可以分享给朋友了'); }
+      function fallback() { showToast('复制失败,请手动选择地址分享'); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(link).then(done).catch(fallback);
+      } else {
+        fallback();
+      }
+    });
+  }
+
+  /* ---------- 回到顶部 ---------- */
+  var toTop = document.getElementById('ctaToTop');
+  function onScroll() {
+    if (!toTop) return;
+    if (window.scrollY > 480) toTop.classList.add('show');
+    else toTop.classList.remove('show');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  if (toTop) {
+    toTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 数字滚动（轻量） ---------- */
+  var statEls = document.querySelectorAll('.cta-hero-stats b');
+  if ('IntersectionObserver' in window && statEls.length) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        var origin = el.textContent;
+        var numMatch = origin.match(/[\d.,]+/);
+        if (!numMatch) { io.unobserve(el); return; }
+        var targetText = numMatch[0];
+        var target = parseFloat(targetText.replace(/,/g, ''));
+        if (!isFinite(target) || target <= 0) { io.unobserve(el); return; }
+        var started = 0;
+        var startTime = null;
+        function step(ts) {
+          if (!startTime) startTime = ts;
+          var p = Math.min((ts - startTime) / 900, 1);
+          var val = target * (1 - Math.pow(1 - p, 3));
+          var display;
+          if (targetText.indexOf(',') > -1) {
+            display = Math.round(val).toLocaleString('en-US');
+          } else if (targetText.indexOf('.') > -1) {
+            display = val.toFixed(1);
+          } else {
+            display = String(Math.round(val));
+          }
+          el.textContent = origin.replace(targetText, display);
+          if (p < 1) requestAnimationFrame(step);
+          else el.textContent = origin;
+        }
+        requestAnimationFrame(step);
+        io.unobserve(el);
+      });
+    }, { threshold: 0.6 });
+    statEls.forEach(function (el) { io.observe(el); });
+  }
+})();
+</script>
+</body>
+  </html>
